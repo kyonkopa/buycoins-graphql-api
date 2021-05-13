@@ -14,13 +14,13 @@ module Api
       @BASE_ENDPOINT
     end
 
-    def response
+    def fetch
       response = @client.open(endpoint).read # returns json response
       data = JSON.parse(response)
     end
 
     def current_usd
-      response['bpi']['USD']['rate_float']
+      fetch['bpi']['USD']['rate_float']
     end
   end
 end

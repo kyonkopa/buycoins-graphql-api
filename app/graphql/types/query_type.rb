@@ -1,6 +1,6 @@
 module Types
   class QueryType < Types::BaseObject
-    field :calculate_price, Float, null: false do
+    field :calculate_price, Integer, null: false do
       argument :type, PriceCalculationType, required: true
       argument :margin, Float, required: true
       argument :exchange_rate, Float, required: true
@@ -19,7 +19,7 @@ module Types
       # convert to NGN
       price = exchange_rate*markup
 
-      price.round 2
+      price.round
     end
   end
 end
