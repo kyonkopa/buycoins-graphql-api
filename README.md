@@ -10,3 +10,6 @@ This is graphql api server, queries can be found at `app/graphql/types/query_typ
 
 **Test**  
 `rspec`
+
+**Run**  
+Visit [hosted app](https://buycoins-graphql-api.herokuapp.com/graphiql) OR run `rails s -p 30001` then hit _localhost:3001/graphiql_
